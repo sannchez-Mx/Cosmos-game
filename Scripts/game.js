@@ -381,6 +381,10 @@ class Square{
                 exp.speedX = 5;
             }
         }
+        if (canvas.x && canvas.y) {
+            ship.speedX = canvas.x;
+            ship.speedY = canvas.y; 
+        }
     };
 
     //teclas de Juego
@@ -407,6 +411,10 @@ class Square{
     window.addEventListener('touchend', function (e) {
         canvas.x = false;
         canvas.y = false;
+    })
+    window.addEventListener('touchmove', function (e) {
+        canvas.x = e.touches[0].x;
+        canvas.y = e.touches[0].y;
     })
 };
         
