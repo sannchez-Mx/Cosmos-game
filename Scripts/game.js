@@ -136,7 +136,7 @@ document.getElementById("start-button").onclick = function startGame() {
             this.image1 = new Image();
             this.image1.src = "./images/flechaI.png";
             this.clicked = function() {
-                var myright = this.x + (this.width);
+                var myright = this.x;
                 var clicked = true;
                      if((myright > canvas.x)){
                     clicked = false;
