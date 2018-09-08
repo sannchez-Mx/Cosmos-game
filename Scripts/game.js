@@ -236,7 +236,7 @@ class Square{
     var myLeftBtn = new Buttons(20, 705, 80, 80);    
     var myRightBtn = new Buttons(620, 705, 80, 80);
     var space = new Space();
-    var hitSound = new Sound("./Sonidos/explosión.mp3");
+    var hitSound = new Sound("./Sonidos/explosión.mp3");
     var backgroundSound = new Sound("./Sonidos/mi-cancion2.mp3");
     backgroundSound.loop = true;
     backgroundSound.volume = 0.3;
