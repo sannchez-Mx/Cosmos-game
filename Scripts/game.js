@@ -382,8 +382,8 @@ class Square{
             }
         }
         if (canvas.x && canvas.y) {
-            ship.speedX = canvas.x;
-            ship.speedY = canvas.y; 
+            ship.x = canvas.x;
+            ship.y = canvas.y; 
         }
     };
 
