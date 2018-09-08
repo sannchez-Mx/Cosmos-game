@@ -124,42 +124,6 @@ document.getElementById("start-button").onclick = function startGame() {
             ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
     };
-
-    class Buttons{
-        constructor(x, y, width, height){
-            this.x = x;
-            this.y = y;
-            this.width = width;
-            this.height = height;
-            this.image = new Image();
-            this.image.src = "./images/flechaD.png";
-            this.image1 = new Image();
-            this.image1.src = "./images/flechaI.png";
-            this.clicked = function() {
-                var myright = this.x;
-                var clicked = true;
-                     if((myright > canvas.x)){
-                    clicked = false;
-                }
-                return clicked;
-            }
-            this.clicked2 = function() {
-                var myleft = this.x;
-                var click = true;
-                     if((myleft > canvas.x)){
-                    click = false;
-                }
-                return click;
-            }
-        }
-
-        draw(){
-            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);  
-        }
-        draw2(){
-            ctx.drawImage(this.image1, this.x, this.y, this.width, this.height);  
-        }
-    };
     
     class Sound{
         constructor(src) {
@@ -228,8 +192,6 @@ class Square{
 
     var ship = new Ship(260, 520 , 200, 200);
     var exp = new Explosion(260, 520, 200, 200);
-    var myLeftBtn = new Buttons(20, 705, 80, 80);    
-    var myRightBtn = new Buttons(620, 705, 80, 80);
     var space = new Space();
     var hitSound = new Sound("./Sonidos/explosión.mp3");
     var backgroundSound = new Sound("./Sonidos/mi-cancion2.mp3");
@@ -377,16 +339,6 @@ class Square{
             ship.y = canvas.y; 
             exp.y = canvas.y;
         };
-        if (canvas.x && canvas.y) { // Botones en Canvas
-            if (myLeftBtn.clicked()) {
-                ship.speedX = -5;
-                exp.speedX = -5;
-            }
-            if (myRightBtn.clicked2()) {
-                ship.speedX = 5;
-                exp.speedX = 5;
-            }
-        }
     };
 
     //teclas de Juego
@@ -398,25 +350,9 @@ class Square{
     window.addEventListener('keyup', function (e) {
         canvas.key = false;
     });
-    window.addEventListener('mousedown', function (e) {
-        canvas.x = e.x;
-        canvas.y = e.y;
-    });
-    window.addEventListener('mouseup', function (e) {
-        canvas.x = false;
-        canvas.y = false;
-    });
     window.addEventListener('touchmove', function (e) {
         canvas.x = e.touches[0].x;
         canvas.y = e.touches[0].y;
     });
-    window.addEventListener('touchstart', function (e) {
-        canvas.x = e.x;
-        canvas.y = e.y;
-    })
-    window.addEventListener('touchend', function (e) {
-        canvas.x = false;
-        canvas.y = false;
-    })
 };
         
