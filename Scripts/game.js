@@ -371,6 +371,12 @@ class Square{
             exp.speedY = 5; 
             ship.speedY = 5;
         };
+        if (canvas.x && canvas.y) {
+            ship.x = canvas.x;
+            exp.x = canvas.y
+            ship.y = canvas.y; 
+            exp.y = canvas.y;
+        };
         if (canvas.x && canvas.y) { // Botones en Canvas
             if (myLeftBtn.clicked()) {
                 ship.speedX = -5;
@@ -380,10 +386,6 @@ class Square{
                 ship.speedX = 5;
                 exp.speedX = 5;
             }
-        }
-        if (canvas.x && canvas.y) {
-            ship.x = canvas.x;
-            ship.y = canvas.y; 
         }
     };
 
@@ -404,6 +406,10 @@ class Square{
         canvas.x = false;
         canvas.y = false;
     });
+    window.addEventListener('touchmove', function (e) {
+        canvas.x = e.touches[0].x;
+        canvas.y = e.touches[0].y;
+    });
     window.addEventListener('touchstart', function (e) {
         canvas.x = e.x;
         canvas.y = e.y;
@@ -411,10 +417,6 @@ class Square{
     window.addEventListener('touchend', function (e) {
         canvas.x = false;
         canvas.y = false;
-    })
-    window.addEventListener('touchmove', function (e) {
-        canvas.x = e.touches[0].x;
-        canvas.y = e.touches[0].y;
     })
 };
         
