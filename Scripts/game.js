@@ -136,28 +136,23 @@ document.getElementById("start-button").onclick = function startGame() {
             this.image1 = new Image();
             this.image1.src = "./images/flechaI.png";
             this.clicked = function() {
-                var myleft = this.x;
                 var myright = this.x + (this.width);
-                var mytop = this.y;
-                var mybottom = this.y + (this.height);
                 var clicked = true;
-                     if((myright > canvas.x) || (myleft > canvas.x) || (mytop > canvas.y) ||(mybottom < canvas.y)){
+                     if((myright > canvas.x)){
                     clicked = false;
                 }
                 return clicked;
             }
             this.clicked2 = function() {
                 var myleft = this.x;
-                var myright = this.x + (this.width);
-                var mytop = this.y;
-                var mybottom = this.y + (this.height);
                 var click = true;
-                     if((myright > canvas.x) || (myleft > canvas.x) || (mytop > canvas.y) ||(mybottom < canvas.y)){
+                     if((myleft > canvas.x)){
                     click = false;
                 }
                 return click;
             }
         }
+
         draw(){
             ctx.drawImage(this.image, this.x, this.y, this.width, this.height);  
         }
@@ -376,7 +371,7 @@ class Square{
             exp.speedY = 5; 
             ship.speedY = 5;
         };
-        if (canvas.x && canvas.y) {
+        if (canvas.x && canvas.y) { // Botones en Canvas
             if (myLeftBtn.clicked()) {
                 ship.speedX = -5;
                 exp.speedX = -5;
