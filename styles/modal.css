@@ -1,3 +1,4 @@
+@media only screen and (max-width: 1440px){
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -42,12 +43,51 @@
     text-decoration: none;
     cursor: pointer;
 }
+.leftB {
+    color: white;
+    left: 26.1%;
+    top: 87%;
+    /*margin: 5px 0 0 10px;*/
+    font-size: 75px;
+    font-weight: bold;
+    box-sizing: border-box;
+    position: fixed;
+    height: 43px;
+    width: 43px;
+}
+
+.leftB:hover,
+.leftB:focus {
+    color: lightgreen;
+    text-decoration: none;
+    cursor: pointer;
+}
+.rightB {
+    color: white;
+    left: o;
+    right: 28.7%;
+    top: 88%;
+    /*margin: 5px 0 0 10px;*/
+    font-size: 75px;
+    font-weight: bold;
+    box-sizing: border-box;
+    position: fixed;
+    height: 43px;
+    width: 43px;
+}
+
+.rightB:hover,
+.rightB:focus {
+    color: lightgreen;
+    text-decoration: none;
+    cursor: pointer;
+}
 canvas{
     background-color: white;
     width: 100%;
     height: 100%;
 }
-
+}
 @media only screen and (max-width: 1024px){
     .modal {
         display: none; /* Hidden by default */
@@ -85,6 +125,45 @@ canvas{
     
     .close:hover,
     .close:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .leftB {
+        color: white;
+        left: 25.1%;
+        top: 87%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        height: 43px;
+        width: 43px;
+    }
+    
+    .leftB:hover,
+    .leftB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .rightB {
+        color: white;
+        left: o;
+        right: 27.7%;
+        top: 87.6%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        height: 43px;
+        width: 43px;
+    }
+    
+    .rightB:hover,
+    .rightB:focus {
         color: lightgreen;
         text-decoration: none;
         cursor: pointer;
@@ -131,9 +210,43 @@ canvas{
         box-sizing: border-box;
         position: absolute;
     }
-    
     .close:hover,
     .close:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .leftB {
+        color: white;
+        left: 18.1%;
+        top: 87%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+    }
+    
+    .leftB:hover,
+    .leftB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .rightB {
+        color: white;
+        left: o;
+        right: 20.7%;
+        top: 87.5%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+    }
+    
+    .rightB:hover,
+    .rightB:focus {
         color: lightgreen;
         text-decoration: none;
         cursor: pointer;
@@ -183,6 +296,41 @@ canvas{
     
     .close:hover,
     .close:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .leftB {
+        color: white;
+        left: 1.1%;
+        top: 87.5%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 50px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+    }
+    
+    .leftB:hover,
+    .leftB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .rightB {
+        color: white;
+        left: o;
+        right: 5.7%;
+        top: 88.1%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 50px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+    }
+    
+    .rightB:hover,
+    .rightB:focus {
         color: lightgreen;
         text-decoration: none;
         cursor: pointer;

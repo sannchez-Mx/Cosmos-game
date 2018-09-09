@@ -169,9 +169,9 @@ p{
   height: 40%;
 }
 img{
-  width: 50%;
+  width: 45%;
   height: auto;
-  margin: 0 0 0 135px;
+  margin: -80px 0 0 150px;
 }
 .container {
   padding: 2px 16px;
@@ -193,6 +193,24 @@ h2{
 }
 audio{
   height: 35%;
+}
+.leftB {
+    color: white;
+    float: left;
+    margin: 5px 0 0 10px;
+    font-size: 38px;
+    font-weight: bold;
+    box-sizing: border-box;
+    position: absolute;
+    height: 43px;
+    width: 43px;
+}
+
+.leftB:hover,
+.leftB:focus {
+    color: lightgreen;
+    text-decoration: none;
+    cursor: pointer;
 }
 @media only screen and (max-width: 1024px){
   main{
@@ -444,9 +462,9 @@ p {
   height: 45%;
 }
 img {
-  width: 36%;
+  width: 30%;
   height: auto;
-  margin: -35px 0 0 32%;
+  margin: -80px 0 0 35%;
 }
 }
 
@@ -574,6 +592,6 @@ p {
 img {
   width: 40%;
   height: auto;
-  margin: 15px 0 0 31%;
+  margin: -10px 0 0 31%;
 }
 }

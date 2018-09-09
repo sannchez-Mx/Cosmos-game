@@ -10,6 +10,12 @@ document.getElementById("start-button").onclick = function startGame() {
     var interval;
     var hue = 0;
     
+    document.getElementById("derecha").onclick = function derecha(){
+        ship.speedX += 5;
+    }
+    document.getElementById("izquierda").onclick = function izquierda(){
+        ship.speedX -= 5;
+    }
     
     //constructores 
 
@@ -381,12 +387,6 @@ class Square{
                 exp.speedX = 5;
             }
         }
-        if (canvas.x && canvas.y) {
-            ship.x = canvas.x;
-            exp.x = canvas.y;
-            ship.y = canvas.y;
-            exp.y = canvas.y;
-        }
     };
 
     //teclas de Juego
@@ -397,10 +397,6 @@ class Square{
     
     window.addEventListener('keyup', function (e) {
         canvas.key = false;
-    });
-    window.addEventListener('touchmove', function (e) {
-        canvas.x = e.touches[0].screenX;
-        canvas.y = e.touches[0].screenY;
     });
     window.addEventListener('mousedown', function (e) {
         canvas.x = e.x;
