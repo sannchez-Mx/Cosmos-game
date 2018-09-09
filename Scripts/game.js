@@ -12,8 +12,10 @@ document.getElementById("start-button").onclick = function startGame() {
     var interval;
     var hue = 0;
     
-    document.getElementById("derecha").addEventListener("click", derecha);
-    document.getElementById("izquierda").addEventListener("click", izquierda);
+    document.getElementById("derecha").addEventListener("touchstart", derecha);
+    document.getElementById("derecha").addEventListener("touchend", derecha);
+    document.getElementById("izquierda").addEventListener("touchstart", izquierda);
+    document.getElementById("izquierda").addEventListener("touchend", izquierda);
     
     //constructores 
 

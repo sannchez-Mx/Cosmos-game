@@ -54,6 +54,7 @@
     position: fixed;
     height: 43px;
     width: 43px;
+    display: none;
 }
 
 .leftB:hover,
@@ -74,6 +75,7 @@
     position: fixed;
     height: 43px;
     width: 43px;
+    display: none;
 }
 
 .rightB:hover,
@@ -140,6 +142,7 @@ canvas{
         position: fixed;
         height: 43px;
         width: 43px;
+        display: block;
     }
     
     .leftB:hover,
@@ -160,6 +163,7 @@ canvas{
         position: fixed;
         height: 43px;
         width: 43px;
+        display: block;
     }
     
     .rightB:hover,
@@ -225,6 +229,7 @@ canvas{
         font-weight: bold;
         box-sizing: border-box;
         position: fixed;
+        display: block;
     }
     
     .leftB:hover,
@@ -243,6 +248,7 @@ canvas{
         font-weight: bold;
         box-sizing: border-box;
         position: fixed;
+        display: block;
     }
     
     .rightB:hover,
@@ -309,6 +315,7 @@ canvas{
         font-weight: bold;
         box-sizing: border-box;
         position: fixed;
+        display: block;
     }
     
     .leftB:hover,
@@ -327,6 +334,7 @@ canvas{
         font-weight: bold;
         box-sizing: border-box;
         position: fixed;
+        display: block;
     }
     
     .rightB:hover,
