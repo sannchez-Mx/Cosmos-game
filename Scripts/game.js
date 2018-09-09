@@ -2,6 +2,8 @@ document.getElementById("start-button").onclick = function startGame() {
     start();
     var canvas = document.getElementById("canvas")
     var ctx = canvas.getContext("2d");
+    var LeftBtn = document.getElementById("derecha")
+    var RightBtn = document.getElementById("izquierda")
     var frames = 0;
     var barras = [];
     var sq = [];
@@ -10,12 +12,8 @@ document.getElementById("start-button").onclick = function startGame() {
     var interval;
     var hue = 0;
     
-    document.getElementById("derecha").onclick = function derecha(){
-        ship.speedX += 5;
-    }
-    document.getElementById("izquierda").onclick = function izquierda(){
-        ship.speedX -= 5;
-    }
+    document.getElementById("derecha").addEventListener("click", derecha);
+    document.getElementById("izquierda").addEventListener("click", izquierda);
     
     //constructores 
 
@@ -248,6 +246,14 @@ class Square{
         return (hue+1)%360
     };
 
+    function derecha(){
+        ship.speedX = +40;
+        exp.speedX = +40;
+    }
+    function izquierda(){
+        ship.speedX = -40;
+        exp.speedX = -40;
+    }
     function start(){
         interval = setInterval(update, 1000/60);
     };
