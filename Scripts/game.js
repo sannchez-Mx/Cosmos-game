@@ -285,15 +285,14 @@ class Square{
     };
     
     function update(){
-        var  width;
-        pos = Math.floor(Math.random() * 500); //
-        pos2 = Math.floor(Math.random() * 600);// 
-        pos3 = Math.floor(Math.random() * 550);// Posición en x random
-        pos4 = Math.floor(Math.random() * 700);//
-        width = Math.floor((Math.random()* canvas.width * .55) + 40); // Anchura random
-        hue = shiftHue(hue);//////////////
-        color = "hsl("+hue+",100%,50%)" //
-        color2 = "hsl("+hue+",20%,50%)" // Transiciòn de colores 
+       var pos = Math.floor(Math.random() * 500); //
+       var pos2 = Math.floor(Math.random() * 600);// 
+       var pos3 = Math.floor(Math.random() * 550);// Posición en x random
+       var pos4 = Math.floor(Math.random() * 700);//
+       var width = Math.floor((Math.random()* canvas.width * .55) + 40); // Anchura random
+       hue = shiftHue(hue);//////////////
+       color = "hsl("+hue+",100%,50%)" //
+       color2 = "hsl("+hue+",20%,50%)" // Transiciòn de colores 
 
         for (i = 0; i < barras.length; i ++) { 
             if (ship.collision(barras[i]) || (ship.collision2(sq[i])) || (ship.collision3(barrasG[i])) || (ship.collision3(barrasG2[i]))) { // Colisiones
@@ -308,11 +307,12 @@ class Square{
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         frames++;
         space.draw();
-
+    
         for (i = 0; i < barras.length; i++) { // Genera las barras
             barras[i].draw();
             barras[i].y += 2;
-            if(Math.round(frames/10) == 600 || Math.round(frames/10) == 800 || Math.round(frames/10) == 1000){
+            if(Math.round(frames/10) == 100 || Math.round(frames/10) == 300 || Math.round(frames/10) == 500 || Math.round(frames/10) == 700 || Math.round(frames/10) == 900
+            || Math.round(frames/10) == 1100 || Math.round(frames/10) ==1300 || Math.round(frames/10) == 1500 || Math.round(frames/10) == 1700){
                 barras[i].y += 30;
             }
         };
@@ -320,7 +320,8 @@ class Square{
         for (i = 0; i < sq.length; i++){ // Genera el cuadrado
             sq[i].y += 2;
             sq[i].draw();
-            if(Math.round(frames/10) == 300 || Math.round(frames/10) == 600 || Math.round(frames/10) == 900){
+            if(Math.round(frames/10) == 200 || Math.round(frames/10) == 400 || Math.round(frames/10) == 600 || Math.round(frames/10) == 800 || Math.round(frames/10) == 1000
+            || Math.round(frames/10) == 1200 || Math.round(frames/10) == 1400 || Math.round(frames/10) == 1600 || Math.round(frames/10) == 1800){
                 sq[i].y += 30;
             }
         };
