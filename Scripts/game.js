@@ -222,7 +222,7 @@ class Square{
     }
     function abajo(){
         ship.speedY = +40;
-        exp.speedY = +40;
+        exp.speeY = +40;
     }
 
     function start(){
@@ -369,6 +369,11 @@ class Square{
         clearInterval(interval);
         interval = undefined;
         backgroundSound.stop();
+        frames = 0;
+        barras = [];
+        sq = [];
+        barrasG = [];
+        barrasG2 = [];
         startGame();
         }
     });
