@@ -2,8 +2,6 @@ document.getElementById("start-button").onclick = function startGame() {
     start();
     var canvas = document.getElementById("canvas")
     var ctx = canvas.getContext("2d");
-    var LeftBtn = document.getElementById("derecha")
-    var RightBtn = document.getElementById("izquierda")
     var frames = 0;
     var barras = [];
     var sq = [];
@@ -12,10 +10,10 @@ document.getElementById("start-button").onclick = function startGame() {
     var interval;
     var hue = 0;
     
-    document.getElementById("derecha").addEventListener("touchstart", derecha);
-    document.getElementById("derecha").addEventListener("touchend", derecha);
+    document.getElementById("derecha").addEventListener("touchstart", derecha)
     document.getElementById("izquierda").addEventListener("touchstart", izquierda);
-    document.getElementById("izquierda").addEventListener("touchend", izquierda);
+    document.getElementById("arriba").addEventListener("touchstart", arriba)
+    document.getElementById("abajo").addEventListener("touchstart", abajo);
     
     //constructores 
 
@@ -130,42 +128,6 @@ document.getElementById("start-button").onclick = function startGame() {
             ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
         }
     };
-
-    class Buttons{
-        constructor(x, y, width, height){
-            this.x = x;
-            this.y = y;
-            this.width = width;
-            this.height = height;
-            this.image = new Image();
-            this.image.src = "./images/flechaD.png";
-            this.image1 = new Image();
-            this.image1.src = "./images/flechaI.png";
-            this.clicked = function() {
-                var myright = this.x;
-                var clicked = true;
-                     if((myright > canvas.x)){
-                    clicked = false;
-                }
-                return clicked;
-            }
-            this.clicked2 = function() {
-                var myleft = this.x;
-                var click = true;
-                     if((myleft > canvas.x)){
-                    click = false;
-                }
-                return click;
-            }
-        }
-
-        draw(){
-            ctx.drawImage(this.image, this.x, this.y, this.width, this.height);  
-        }
-        draw2(){
-            ctx.drawImage(this.image1, this.x, this.y, this.width, this.height);  
-        }
-    };
     
     class Sound{
         constructor(src) {
@@ -234,8 +196,6 @@ class Square{
 
     var ship = new Ship(260, 520 , 200, 200);
     var exp = new Explosion(260, 520, 200, 200);
-    var myLeftBtn = new Buttons(20, 705, 80, 80);    
-    var myRightBtn = new Buttons(620, 705, 80, 80);
     var space = new Space();
     var hitSound = new Sound("./Sonidos/explosión.mp3");
     var backgroundSound = new Sound("./Sonidos/mi-cancion2.mp3");
@@ -256,6 +216,15 @@ class Square{
         ship.speedX = -40;
         exp.speedX = -40;
     }
+    function arriba(){
+        ship.speedY = -40;
+        exp.speedY = -40;
+    }
+    function abajo(){
+        ship.speedY = +40;
+        exp.speedY = +40;
+    }
+
     function start(){
         interval = setInterval(update, 1000/60);
     };
@@ -358,8 +327,6 @@ class Square{
         ship.draw();
         ship.newPos();
         exp.newPos2();
-        myRightBtn.draw();
-        myLeftBtn.draw2();
         points();
         space.y++;
         backgroundSound.play();
@@ -369,7 +336,7 @@ class Square{
         exp.speedY = 0;
         
         //teclas de juego
-        
+
         if (canvas.key && canvas.key == 37){
             exp.speedX = -5;
             ship.speedX = -5;
@@ -386,16 +353,6 @@ class Square{
             exp.speedY = 5; 
             ship.speedY = 5;
         };
-        if (canvas.x && canvas.y) { // Botones en Canvas
-            if (myLeftBtn.clicked()) {
-                ship.speedX = -5;
-                exp.speedX = -5;
-            }
-            if (myRightBtn.clicked2()) {
-                ship.speedX = 5;
-                exp.speedX = 5;
-            }
-        }
     };
 
     //teclas de Juego
@@ -407,21 +364,13 @@ class Square{
     window.addEventListener('keyup', function (e) {
         canvas.key = false;
     });
-    window.addEventListener('mousedown', function (e) {
-        canvas.x = e.x;
-        canvas.y = e.y;
+    window.addEventListener("keypress", function(e){
+        if(e.keyCode === 88){
+        clearInterval(interval);
+        interval = undefined;
+        backgroundSound.stop();
+        startGame();
+        }
     });
-    window.addEventListener('mouseup', function (e) {
-        canvas.x = false;
-        canvas.y = false;
-    });
-    window.addEventListener('touchstart', function (e) {
-        canvas.x = e.x;
-        canvas.y = e.y;
-    })
-    window.addEventListener('touchend', function (e) {
-        canvas.x = false;
-        canvas.y = false;
-    })
 };
         

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1440px){
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -89,7 +89,6 @@ canvas{
     width: 100%;
     height: 100%;
 }
-}
 @media only screen and (max-width: 1024px){
     .modal {
         display: none; /* Hidden by default */
@@ -168,6 +167,43 @@ canvas{
     
     .rightB:hover,
     .rightB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .UpB {
+        color: white;
+        left: 37.9%;
+        top: 87.7%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+    }
+    
+    .UpB:hover,
+    .UpB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .myDownBtn {
+        color: white;
+        left: o;
+        right: 36%;
+        top: 87.5%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+    }
+    
+    .myDownBtn:hover,
+    .myDownBtn:focus {
         color: lightgreen;
         text-decoration: none;
         cursor: pointer;
@@ -257,6 +293,43 @@ canvas{
         text-decoration: none;
         cursor: pointer;
     }
+    .UpB {
+        color: white;
+        left: 37.9%;
+        top: 87.7%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+    }
+    
+    .UpB:hover,
+    .UpB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .myDownBtn {
+        color: white;
+        left: o;
+        right: 36%;
+        top: 87.5%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 60px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+    }
+    
+    .myDownBtn:hover,
+    .myDownBtn:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
     canvas{
         float: right;
         background-color: white;
@@ -339,6 +412,44 @@ canvas{
     
     .rightB:hover,
     .rightB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    .UpB {
+        color: white;
+        left: 28.9%;
+        top: 88.1%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 50px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+    }
+    
+    .UpB:hover,
+    .UpB:focus {
+        color: lightgreen;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .myDownBtn {
+        color: white;
+        left: o;
+        right: 27%;
+        top: 88.1%;
+        /*margin: 5px 0 0 10px;*/
+        font-size: 50px;
+        font-weight: bold;
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+    }
+    
+    .myDownBtn:hover,
+    .myDownBtn:focus {
         color: lightgreen;
         text-decoration: none;
         cursor: pointer;
