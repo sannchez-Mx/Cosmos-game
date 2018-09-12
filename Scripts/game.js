@@ -222,7 +222,7 @@ class Square{
     }
     function abajo(){
         ship.speedY = +40;
-        exp.speeY = +40;
+        exp.speedY = +40;
     }
 
     function start(){
