@@ -43,47 +43,6 @@
     text-decoration: none;
     cursor: pointer;
 }
-.leftB {
-    color: white;
-    left: 26.1%;
-    top: 87%;
-    /*margin: 5px 0 0 10px;*/
-    font-size: 75px;
-    font-weight: bold;
-    box-sizing: border-box;
-    position: fixed;
-    height: 43px;
-    width: 43px;
-    display: none;
-}
-
-.leftB:hover,
-.leftB:focus {
-    color: lightgreen;
-    text-decoration: none;
-    cursor: pointer;
-}
-.rightB {
-    color: white;
-    left: o;
-    right: 28.7%;
-    top: 88%;
-    /*margin: 5px 0 0 10px;*/
-    font-size: 75px;
-    font-weight: bold;
-    box-sizing: border-box;
-    position: fixed;
-    height: 43px;
-    width: 43px;
-    display: none;
-}
-
-.rightB:hover,
-.rightB:focus {
-    color: lightgreen;
-    text-decoration: none;
-    cursor: pointer;
-}
 canvas{
     background-color: white;
     width: 100%;
@@ -173,7 +132,7 @@ canvas{
     }
     .UpB {
         color: white;
-        left: 37.9%;
+        left: 38.9%;
         top: 87.7%;
         /*margin: 5px 0 0 10px;*/
         font-size: 60px;
@@ -192,7 +151,7 @@ canvas{
     .myDownBtn {
         color: white;
         left: o;
-        right: 36%;
+        right: 39%;
         top: 87.5%;
         /*margin: 5px 0 0 10px;*/
         font-size: 60px;
