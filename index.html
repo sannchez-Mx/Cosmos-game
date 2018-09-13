@@ -1,95 +1,100 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cosmos</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="./images/icon.png" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="./styles/modal.css" />
-    
-    </head>
-    
-    <body>
 
-        <!-- Nombre -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cosmos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/modal.css" />
 
-        <header>
-            <main>
-                <h1>
-                    <em>C</em>
-                    <em class="planet left">O</em>
-                    <em>S</em>
-                    <em>M</em>
-                    <em class="planet right">O</em>
-                    <em>S</em>
-                </h1>
-                
-                <!-- Botón para iniciar el juego-->
-                
-                <div id="boton">
-                    <button id="start-button" class="start">Start Game</button>
+</head>
+
+<body>
+
+    <!-- Nombre -->
+
+    <header>
+        <main>
+            <h1>
+                <em>C</em>
+                <em class="planet left">O</em>
+                <em>S</em>
+                <em>M</em>
+                <em class="planet right">O</em>
+                <em>S</em>
+            </h1>
+
+            <!-- Botón para iniciar el juego-->
+
+            <div id="boton">
+                <button id="start-button" class="start">Start Game</button>
+            </div>
+
+            <!-- Canvas -->
+
+            <div id="gameBoard" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="res"><i class="far fa-window-close"></i></span>
+                    <canvas id="canvas" width="715" height="800"></canvas>
+                    <span class="leftB" id="izquierda"><i class="fas fa-arrow-circle-left"></i></span>
+                    <span class="rightB" id="derecha"><i class="fas fa-arrow-circle-right"></i></span>
+                    <span class="UpB" id="arriba"><i class="fas fa-arrow-circle-up"></i></span>
+                    <span class="myDownBtn" id="abajo"><i class="fas fa-arrow-circle-down"></i></span>
                 </div>
-                
-                <!-- Canvas -->
-                
-                <div id="gameBoard" class="modal">
-                    <div class="modal-content">
-                        <span class="close" id="res"><i class="far fa-window-close"></i></span>
-                        <canvas id="canvas" width="715" height="800"></canvas>
-                        <span class="leftB" id="izquierda"><i class="fas fa-arrow-circle-left"></i></span>
-                        <span class="rightB" id="derecha"><i class="fas fa-arrow-circle-right"></i></span>
-                        <span class="UpB" id="arriba"><i class="fas fa-arrow-circle-up"></i></span>
-                        <span class="myDownBtn" id="abajo"><i class="fas fa-arrow-circle-down"></i></span>
-                    </div>
-                </div>
-            </main>
-        </header>
+            </div>
+        </main>
+    </header>
 
-        <!-- Introduccion -->
+    <!-- Introduccion -->
 
-        <section class="welcome">
-                <h2>Bienvenido a <em>C</em>
-                    <em class="x">O</em>
-                    <em>S</em>
-                    <em>M</em>
-                    <em class="y">O</em>
-                    <em>S</em>
-                </h2>
-                <p class="w">Un juego donde tu supervivencia depende de la protección  de tu nave, evitando tocar todo lo que se interponga en tu camino. Ten cuidado porque lo que parece sencillo al final pude tornarse difícil.</p>
-        </section>
-        
-        <!-- Información -->
+    <section class="welcome">
+        <h2>Bienvenido a <em>C</em>
+            <em class="x">O</em>
+            <em>S</em>
+            <em>M</em>
+            <em class="y">O</em>
+            <em>S</em>
+        </h2>
+        <p class="w">Un juego donde tu supervivencia depende de la protección de tu nave, evitando tocar todo lo que se
+            interponga en tu camino. Ten cuidado porque lo que parece sencillo al final pude tornarse difícil.</p>
+    </section>
 
-        <section class="cards">
-                <div class="card">
-                    <div class="Info"><i class="fas fa-info-circle"></i></div>
-                    <div class="container">
-                        <h4><b>Instrucciones</b></h4> 
-                        <p>Simplemente el objetivo del juego es sobrevivir el máximo tiempo posible sin tocar ningún obstáculo que se cruce en tu camino y así acumulando el mayor puntaje posible.</p> 
-                    </div>
-                </div>
-                <div class="card">
-                        <div class="gamePad"><i class="fas fa-gamepad pad"></i></div>
-                        <div class="container">
-                            <h4><b>Controles</b></h4> 
-                            <p>Básicamente  los controles del juego son las flechas situadas en el teclado de tu computadora.</p>
-                            <img src="./images/flechas.png" alt="flechas"> 
-                        </div>
-                    </div>
-        </section>
-            
-        <!--Scripts-->
+    <!-- Información -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="./Scripts/modal.js"></script>
-        <script src="./Scripts/game.js"></script>
+    <section class="cards">
+        <div class="card">
+            <div class="Info"><i class="fas fa-info-circle"></i></div>
+            <div class="container">
+                <h4><b>Instrucciones</b></h4>
+                <p>Simplemente el objetivo del juego es sobrevivir el máximo tiempo posible sin tocar ningún obstáculo
+                    que se cruce en tu camino y así acumulando el mayor puntaje posible.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="gamePad"><i class="fas fa-gamepad pad"></i></div>
+            <div class="container">
+                <h4><b>Controles</b></h4>
+                <p>Básicamente los controles del juego son las flechas situadas en el teclado de tu computadora.</p>
+                <img src="./images/flechas.png" alt="flechas">
+            </div>
+        </div>
+    </section>
 
-    </body>
-    
+    <!--Scripts-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./Scripts/modal.js"></script>
+    <script src="./Scripts/clases.js"></script>
+    <script src="./Scripts/funciones.js"></script>
+
+</body>
+
 </html>

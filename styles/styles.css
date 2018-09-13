@@ -1,133 +1,132 @@
 * {
-    margin: 0%;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100%;
+  margin: 0%;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 header {
-    background-image: url(../images/BACK.gif);
-    background-repeat: round;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ccc;
-    box-shadow: 0 12px 18px gray;
-  }
-
-  h1 {
-    margin: 35% 0 0 0;
-    height: 12vmin;
-    width: 120vmin;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  
-  h1::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: -14.2vw;
-    left: 16vw;
-    width: 35vw;
-    height: 35vw;
-    border-radius: 50%;
-    border: 12px solid currentColor;
-    box-sizing: border-box;
-    color: #ccc;
-  }
-  
-  em {
-    font-family: 'Josefin Sans', sans-serif;
-    color: currentColor;
-    font-size: 15vmin;
-    position: relative;
-    font-style: normal;
-    width: 180px;
-    text-align: center;
-  }
-  
-  em.planet {
-    -webkit-animation: planet-rotate 12s linear infinite;
-    animation: planet-rotate 12s linear infinite;
-    position: relative;
-  }
-  
-  .planet::before {
-    content: "";
-    position: fixed;
-    top: -.5vmin;
-    left: 3.5vmin;
-    z-index: -1;
-    width: 13vmin;
-    height: 13vmin;
-    border-radius: 50%;
-    background: black;
-  }
-
-  
-  .planet.left {
-    -webkit-transform-origin: 40vmin 5vmin;
-    transform-origin: 40vmin 5vmin;
-    color: red;
-  }
-  .x{
-    color: red;
-  }
-  
-  .planet.right {
-    -webkit-transform-origin: -20vmin 5vmin;
-    transform-origin: -20vmin 5vmin;
-    color: blue;
-  }
-  .y{
-    color: blue;
-  }
-  
-  @-webkit-keyframes planet-rotate {
-    to {
-      -webkit-transform: rotate(1turn);
-    }
-  }
-  
-  @keyframes planet-rotate {
-    to {
-      transform: rotate(1turn);
-    }
-  }
-  #boton{
-      display: flex;
-      justify-content: center;
-      margin: 55px 0 0 0;
-  }
-  .start{
-    width: 20%;
-    height: 6%;
-    font-size: 16px;
-    font-family: 'Audiowide', cursive;
-    color: white;
-    border: 2px solid white;
-    border-radius: 8px;
-    background-color: transparent;
-    -webkit-transition-duration: 0.4s; 
-    transition-duration: 1s;
-    cursor: pointer;
-    z-index: 1;
+  background-image: url(../images/BACK.gif);
+  background-repeat: round;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  box-shadow: 0 12px 18px gray;
 }
-.start:hover{
-    background-color: #57ab3a;
+
+h1 {
+  margin: 35% 0 0 0;
+  height: 12vmin;
+  width: 120vmin;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-.cards{
-    display: flex;
-    justify-content: center;
+
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: -14.2vw;
+  left: 16vw;
+  width: 35vw;
+  height: 35vw;
+  border-radius: 50%;
+  border: 12px solid currentColor;
+  box-sizing: border-box;
+  color: #ccc;
+}
+
+em {
+  font-family: "Josefin Sans", sans-serif;
+  color: currentColor;
+  font-size: 15vmin;
+  position: relative;
+  font-style: normal;
+  width: 180px;
+  text-align: center;
+}
+
+em.planet {
+  -webkit-animation: planet-rotate 12s linear infinite;
+  animation: planet-rotate 12s linear infinite;
+  position: relative;
+}
+
+.planet::before {
+  content: "";
+  position: fixed;
+  top: -0.5vmin;
+  left: 3.5vmin;
+  z-index: -1;
+  width: 13vmin;
+  height: 13vmin;
+  border-radius: 50%;
+  background: black;
+}
+
+.planet.left {
+  -webkit-transform-origin: 40vmin 5vmin;
+  transform-origin: 40vmin 5vmin;
+  color: red;
+}
+.x {
+  color: red;
+}
+
+.planet.right {
+  -webkit-transform-origin: -20vmin 5vmin;
+  transform-origin: -20vmin 5vmin;
+  color: blue;
+}
+.y {
+  color: blue;
+}
+
+@-webkit-keyframes planet-rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+#boton {
+  display: flex;
+  justify-content: center;
+  margin: 55px 0 0 0;
+}
+.start {
+  width: 20%;
+  height: 6%;
+  font-size: 16px;
+  font-family: "Audiowide", cursive;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 1s;
+  cursor: pointer;
+  z-index: 1;
+}
+.start:hover {
+  background-color: #57ab3a;
+}
+.cards {
+  display: flex;
+  justify-content: center;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
   border-radius: 5px;
@@ -135,22 +134,22 @@ header {
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
 }
-h4{
+h4 {
   height: auto;
   font-size: 40px;
-  font-family: 'Baloo Tammudu', cursive;
+  font-family: "Baloo Tammudu", cursive;
   text-align: center;
-  padding:  35px 0 35px 0;
+  padding: 35px 0 35px 0;
 }
-p{
+p {
   font-size: 25px;
   text-align: center;
   line-height: 40px;
   height: 20%;
 }
-.Info{
+.Info {
   font-size: 190px;
   padding: 35px 0 0 190px;
   background-image: url(../images/blue.jpg);
@@ -168,7 +167,7 @@ p{
   width: 100%;
   height: 40%;
 }
-img{
+img {
   width: 45%;
   height: auto;
   margin: -80px 0 0 150px;
@@ -176,44 +175,44 @@ img{
 .container {
   padding: 2px 16px;
 }
-.welcome{
+.welcome {
   height: 50%;
   box-shadow: 0 12px 18px gray;
 }
-h2{
+h2 {
   font-size: 60px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
   margin: 130px 0 0 0;
   height: 30%;
 }
-.w{
+.w {
   font-size: 30px;
   margin: 70px 0 0 0;
 }
-audio{
+audio {
   height: 35%;
 }
 .leftB {
-    color: white;
-    float: left;
-    margin: 5px 0 0 10px;
-    font-size: 38px;
-    font-weight: bold;
-    box-sizing: border-box;
-    position: absolute;
-    height: 43px;
-    width: 43px;
+  color: white;
+  float: left;
+  margin: 5px 0 0 10px;
+  font-size: 38px;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: absolute;
+  height: 43px;
+  width: 43px;
 }
 
 .leftB:hover,
 .leftB:focus {
-    color: lightgreen;
-    text-decoration: none;
-    cursor: pointer;
+  color: lightgreen;
+  text-decoration: none;
+  cursor: pointer;
 }
-@media only screen and (max-width: 1024px){
-  main{
+@media only screen and (max-width: 1024px) {
+  main {
     margin: -21vw 0 0 0;
   }
   h1 {
@@ -238,110 +237,110 @@ audio{
     border: 9px solid currentColor;
     box-sizing: border-box;
     color: #ccc;
-}
+  }
   .planet.left {
     -webkit-transform-origin: 40vmin 5vmin;
     transform-origin: 33vmin 8vmin;
     color: red;
-}
-.planet.right {
-  -webkit-transform-origin: -20vmin 5vmin;
-  transform-origin: -17vmin 6vmin;
-  color: blue;
-}
-em.planet {
-  -webkit-animation: planet-rotate 12s linear infinite;
-  animation: planet-rotate 9s linear infinite;
-  position: relative;
-}
-  #boton{
+  }
+  .planet.right {
+    -webkit-transform-origin: -20vmin 5vmin;
+    transform-origin: -17vmin 6vmin;
+    color: blue;
+  }
+  em.planet {
+    -webkit-animation: planet-rotate 12s linear infinite;
+    animation: planet-rotate 9s linear infinite;
+    position: relative;
+  }
+  #boton {
     display: flex;
     justify-content: center;
     margin: 120px 0 0 0;
-}
-.start{
-  width: 40%;
-  height: 7%;
-  font-size: 13px;
-  font-family: 'Audiowide', cursive;
-  color: white;
-  border: 2px solid white;
-  border-radius: 8px;
-  background-color: transparent;
-  -webkit-transition-duration: 0.4s; 
-  transition-duration: 1s;
-  cursor: pointer;
-  z-index: 1;
-}
-.welcome{
-  height: 80%;
-  box-shadow: 0 12px 18px gray;
+  }
+  .start {
+    width: 40%;
+    height: 7%;
+    font-size: 13px;
+    font-family: "Audiowide", cursive;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 1s;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .welcome {
+    height: 80%;
+    box-shadow: 0 12px 18px gray;
+  }
+
+  h2 {
+    font-size: 6vw;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    line-height: 60px;
+    margin: 70px 0 0 0;
+    height: 30%;
+  }
+  .w {
+    font-size: 25px;
+    margin: 25px 0 0 0;
+  }
+  .cards {
+    justify-content: center;
+    display: flex;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40vw;
+    height: 80vw;
+    border-radius: 5px;
+    margin: 100px 80px 0 75px;
+  }
+  .Info {
+    font-size: 15vw;
+    padding: 20px 0 0 123px;
+    background-image: url(../images/blue.jpg);
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 25%;
+  }
+  h4 {
+    height: auto;
+    font-size: 60px;
+    font-family: "Baloo Tammudu", cursive;
+    text-align: center;
+    padding: 35px 0 0 0;
+  }
+  p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    height: 20%;
+  }
+  .gamePad {
+    font-size: 20vw;
+    padding: 0 75px 0 75px;
+    background-image: url(../images/red.jpg);
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 25%;
+  }
+  img {
+    width: 50%;
+    height: auto;
+    margin: -20px 0 0 26%;
+  }
 }
 
-h2{
-  font-size: 6vw;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
-  line-height: 60px;
-  margin: 70px 0 0 0;
-  height: 30%;
-}
-.w{
-  font-size: 25px;
-  margin: 25px 0 0 0;
-}
-.cards {
- justify-content: center;
-  display: flex;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40vw;
-  height: 80vw;
-  border-radius: 5px;
-  margin: 100px 80px 0 75px;
-}
-.Info{
-  font-size: 15vw;
-  padding: 20px 0 0 123px;
-  background-image: url(../images/blue.jpg);
-  background-size: cover;
-  color: white;
-  width: 100%;
-  height: 25%;
-}
-h4 {
-  height: auto;
-  font-size: 60px;
-  font-family: 'Baloo Tammudu', cursive;
-  text-align: center;
-  padding: 35px 0 0 0;
-}
-p {
-  font-size: 20px;
-  text-align: center;
-  line-height: 35px;
-  height: 20%;
-}
-.gamePad {
-  font-size: 20vw;
-  padding: 0 75px 0 75px;
-  background-image: url(../images/red.jpg);
-  background-size: cover;
-  color: white;
-  width: 100%;
-  height: 25%;
-}
-img {
-  width: 50%;
-  height: auto;
-  margin: -20px 0 0 26%;
-}
-}
-
-@media only screen and (max-width: 768px){
-  main{
+@media only screen and (max-width: 768px) {
+  main {
     margin: -28vw 0 0 0;
   }
   h1 {
@@ -366,110 +365,110 @@ img {
     border: 9px solid currentColor;
     box-sizing: border-box;
     color: #ccc;
-}
+  }
   .planet.left {
     -webkit-transform-origin: 40vmin 5vmin;
     transform-origin: 33vmin 8vmin;
     color: red;
-}
-.planet.right {
-  -webkit-transform-origin: -20vmin 5vmin;
-  transform-origin: -17vmin 6vmin;
-  color: blue;
-}
-em.planet {
-  -webkit-animation: planet-rotate 12s linear infinite;
-  animation: planet-rotate 9s linear infinite;
-  position: relative;
-}
-  #boton{
+  }
+  .planet.right {
+    -webkit-transform-origin: -20vmin 5vmin;
+    transform-origin: -17vmin 6vmin;
+    color: blue;
+  }
+  em.planet {
+    -webkit-animation: planet-rotate 12s linear infinite;
+    animation: planet-rotate 9s linear infinite;
+    position: relative;
+  }
+  #boton {
     display: flex;
     justify-content: center;
     margin: 120px 0 0 0;
-}
-.start{
-  width: 40%;
-  height: 7%;
-  font-size: 13px;
-  font-family: 'Audiowide', cursive;
-  color: white;
-  border: 2px solid white;
-  border-radius: 8px;
-  background-color: transparent;
-  -webkit-transition-duration: 0.4s; 
-  transition-duration: 1s;
-  cursor: pointer;
-  z-index: 1;
-}
-.welcome{
-  height: 80%;
-  box-shadow: 0 12px 18px gray;
+  }
+  .start {
+    width: 40%;
+    height: 7%;
+    font-size: 13px;
+    font-family: "Audiowide", cursive;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 1s;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .welcome {
+    height: 80%;
+    box-shadow: 0 12px 18px gray;
+  }
+
+  h2 {
+    font-size: 6vw;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    line-height: 60px;
+    margin: 70px 0 0 0;
+    height: 30%;
+  }
+  .w {
+    font-size: 25px;
+    margin: 25px 0 0 0;
+  }
+  .cards {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 90vw;
+    border-radius: 5px;
+    margin: 100px 80px 0 75px;
+  }
+  .Info {
+    font-size: 25vw;
+    padding: 40px 112px 250px 210px;
+    background-image: url(../images/blue.jpg);
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 25%;
+  }
+  h4 {
+    height: auto;
+    font-size: 60px;
+    font-family: "Baloo Tammudu", cursive;
+    text-align: center;
+    padding: 35px 0 0 0;
+  }
+  p {
+    font-size: 25px;
+    text-align: center;
+    line-height: 35px;
+    height: 20%;
+  }
+  .gamePad {
+    font-size: 39vw;
+    padding: 0 65px 0 115px;
+    background-image: url(../images/red.jpg);
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 45%;
+  }
+  img {
+    width: 30%;
+    height: auto;
+    margin: -80px 0 0 35%;
+  }
 }
 
-h2{
-  font-size: 6vw;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
-  line-height: 60px;
-  margin: 70px 0 0 0;
-  height: 30%;
-}
-.w{
-  font-size: 25px;
-  margin: 25px 0 0 0;
-}
-.cards {
-  flex-wrap: wrap;
-  display: flex;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
-  height: 90vw;
-  border-radius: 5px;
-  margin: 100px 80px 0 75px;
-}
-.Info{
-  font-size: 25vw;
-  padding: 40px 112px 250px 210px;
-  background-image: url(../images/blue.jpg);
-  background-size: cover;
-  color: white;
-  width: 100%;
-  height: 25%;
-}
-h4 {
-  height: auto;
-  font-size: 60px;
-  font-family: 'Baloo Tammudu', cursive;
-  text-align: center;
-  padding: 35px 0 0 0;
-}
-p {
-  font-size: 25px;
-  text-align: center;
-  line-height: 35px;
-  height: 20%;
-}
-.gamePad {
-  font-size: 39vw;
-  padding: 0 65px 0 115px;
-  background-image: url(../images/red.jpg);
-  background-size: cover;
-  color: white;
-  width: 100%;
-  height: 45%;
-}
-img {
-  width: 30%;
-  height: auto;
-  margin: -80px 0 0 35%;
-}
-}
-
-@media only screen and (max-width: 425px){
-  main{
+@media only screen and (max-width: 425px) {
+  main {
     margin: -28vw 0 0 0;
   }
   h1 {
@@ -499,99 +498,99 @@ img {
     -webkit-transform-origin: 40vmin 5vmin;
     transform-origin: 33vmin 8vmin;
     color: red;
-}
-.planet.right {
-  -webkit-transform-origin: -20vmin 5vmin;
-  transform-origin: -17vmin 6vmin;
-  color: blue;
-}
-em.planet {
-  -webkit-animation: planet-rotate 12s linear infinite;
-  animation: planet-rotate 9s linear infinite;
-  position: relative;
-}
-  #boton{
+  }
+  .planet.right {
+    -webkit-transform-origin: -20vmin 5vmin;
+    transform-origin: -17vmin 6vmin;
+    color: blue;
+  }
+  em.planet {
+    -webkit-animation: planet-rotate 12s linear infinite;
+    animation: planet-rotate 9s linear infinite;
+    position: relative;
+  }
+  #boton {
     display: flex;
     justify-content: center;
     margin: 120px 0 0 0;
-}
-.start{
-  width: 40%;
-  height: 7%;
-  font-size: 13px;
-  font-family: 'Audiowide', cursive;
-  color: white;
-  border: 2px solid white;
-  border-radius: 8px;
-  background-color: transparent;
-  -webkit-transition-duration: 0.4s; 
-  transition-duration: 1s;
-  cursor: pointer;
-  z-index: 1;
-}
-.welcome{
-  height: 80%;
-  box-shadow: 0 12px 18px gray;
-}
+  }
+  .start {
+    width: 40%;
+    height: 7%;
+    font-size: 13px;
+    font-family: "Audiowide", cursive;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 1s;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .welcome {
+    height: 80%;
+    box-shadow: 0 12px 18px gray;
+  }
 
-h2{
-  font-size: 14.7vw;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
-  line-height: 60px;
-  margin: 70px 0 0 0;
-  height: 30%;
-}
-.w{
-  font-size: 20px;
-  margin: 25px 0 0 0;
-}
-.cards {
-  flex-wrap: wrap;
-  display: flex;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 100%;
-  height: 160vw;
-  border-radius: 5px;
-  margin: 100px 80px 0 75px;
-}
-.Info{
-  font-size: 25vw;
-  padding: 20px 112px 0 114px;
-  background-image: url(../images/blue.jpg);
-  background-size: cover;
-  color: white;
-  width: 100%;
-  height: 25%;
-}
-h4 {
-  height: auto;
-  font-size: 40px;
-  font-family: 'Baloo Tammudu', cursive;
-  text-align: center;
-  padding: 35px 0 0 0;
-}
-p {
-  font-size: 17px;
-  text-align: center;
-  line-height: 35px;
-  height: 20%;
-}
-.gamePad {
-  font-size: 39vw;
-  padding: 35px 65px 0 65px;
-  background-image: url(../images/red.jpg);
-  background-size: cover;
-  color: white;
-  width: 100%;
-  height: 40%;
-}
-img {
-  width: 40%;
-  height: auto;
-  margin: -10px 0 0 31%;
-}
+  h2 {
+    font-size: 14.7vw;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    line-height: 60px;
+    margin: 70px 0 0 0;
+    height: 30%;
+  }
+  .w {
+    font-size: 20px;
+    margin: 25px 0 0 0;
+  }
+  .cards {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 160vw;
+    border-radius: 5px;
+    margin: 100px 80px 0 75px;
+  }
+  .Info {
+    font-size: 25vw;
+    padding: 20px 112px 0 114px;
+    background-image: url(../images/blue.jpg);
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 25%;
+  }
+  h4 {
+    height: auto;
+    font-size: 40px;
+    font-family: "Baloo Tammudu", cursive;
+    text-align: center;
+    padding: 35px 0 0 0;
+  }
+  p {
+    font-size: 17px;
+    text-align: center;
+    line-height: 35px;
+    height: 20%;
+  }
+  .gamePad {
+    font-size: 39vw;
+    padding: 35px 65px 0 65px;
+    background-image: url(../images/red.jpg);
+    background-size: cover;
+    color: white;
+    width: 100%;
+    height: 40%;
+  }
+  img {
+    width: 40%;
+    height: auto;
+    margin: -10px 0 0 31%;
+  }
 }
