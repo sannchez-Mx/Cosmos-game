@@ -357,10 +357,10 @@ audio {
     display: block;
     position: absolute;
     z-index: 0;
-    top: -13vw;
-    left: 13vw;
-    width: 33vw;
-    height: 33vw;
+    top: -170%;
+    left: 22%;
+    width: 55%;
+    height: 430%;
     border-radius: 50%;
     border: 9px solid currentColor;
     box-sizing: border-box;
