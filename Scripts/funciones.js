@@ -8,12 +8,10 @@ document.getElementById("start-button").onclick = function startGame() {
   var interval;
   var hue = 0;
 
-  document.getElementById("derecha").addEventListener("touchstart", derecha);
-  document
-    .getElementById("izquierda")
-    .addEventListener("touchstart", izquierda);
-  document.getElementById("arriba").addEventListener("touchstart", arriba);
-  document.getElementById("abajo").addEventListener("touchstart", abajo);
+  document.getElementById("derecha").addEventListener("click", derecha);
+  document.getElementById("izquierda").addEventListener("click", izquierda);
+  document.getElementById("arriba").addEventListener("click", arriba);
+  document.getElementById("abajo").addEventListener("click", abajo);
 
   //instacias
 
@@ -83,7 +81,7 @@ document.getElementById("start-button").onclick = function startGame() {
     hue = shiftHue(hue); //////////////
     color = "hsl(" + hue + ",100%,50%)"; //
     color2 = "hsl(" + hue + ",20%,50%)"; // Transiciòn de colores
-    
+
     for (i = 0; i < barras.length; i++) {
       if (
         ship.collision(barras[i]) ||
