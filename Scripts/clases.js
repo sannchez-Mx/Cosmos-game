@@ -11,7 +11,7 @@ class Space {
     this.height = canvas.height;
     this.image = new Image();
     this.image.src = "./images/darkspace.jpg";
-  }
+  };
   draw() {
     if (this.y > +canvas.height) this.y = 0;
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
@@ -22,8 +22,8 @@ class Space {
       this.width,
       this.height
     );
-  }
-}
+  };
+};
 class Explosion {
   constructor(x, y, width, height) {
     this.x = x;
@@ -38,11 +38,11 @@ class Explosion {
     this.height = height;
     this.image = new Image();
     this.image.src = "./images/explosion.png";
-  }
+  };
   draw() {
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-  }
-}
+  };
+};
 class Ship {
   constructor(x, y, width, height) {
     this.x = x;
@@ -57,7 +57,7 @@ class Ship {
     this.height = height;
     this.image = new Image();
     this.image.src = "./images/spaceShip.png";
-  }
+  };
   collision(otherobj) {
     var myleft = this.x + 73;
     var myright = this.x + this.width;
@@ -75,9 +75,9 @@ class Ship {
       mybottom < othertop
     ) {
       crash = false;
-    }
+    };
     return crash;
-  }
+  };
   collision2(item) {
     var myleft = this.x + 73;
     var myright = this.x + this.width;
@@ -95,9 +95,9 @@ class Ship {
       mybottom < othertop
     ) {
       crash = false;
-    }
+    };
     return crash;
-  }
+  };
   collision3(item2) {
     var myleft = this.x + 73;
     var myright = this.x + this.width;
@@ -115,9 +115,9 @@ class Ship {
       mybottom < othertop
     ) {
       crash = false;
-    }
+    };
     return crash;
-  }
+  };
   draw() {
     //limites
     if (this.x > canvas.width - 133) this.x -= 5;
@@ -125,8 +125,8 @@ class Ship {
     if (this.y < 0 - 45) this.y += 5;
     if (this.y > canvas.height - 150) this.y -= 5; //limites
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-  }
-}
+  };
+};
 class Sound {
   constructor(src) {
     this.sound = document.createElement("audio");
@@ -140,32 +140,32 @@ class Sound {
     this.stop = function() {
       this.sound.pause();
     };
-  }
-}
+  };
+};
 class Square {
   constructor(pos2, y, width, height) {
     this.x = pos2;
     this.y = y;
     this.width = width;
     this.height = height;
-  }
+  };
   draw() {
     ctx.fillStyle = color2;
     ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
-}
+  };
+};
 class Bars {
   constructor(pos, y, width, height) {
     this.x = pos;
     this.y = y;
     this.width = width;
     this.height = height;
-  }
+  };
   draw() {
     ctx.fillStyle = color;
     ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
-}
+  };
+};
 class Bars_g {
   constructor(pos3, y, width, height) {
     this.x = pos3;
@@ -173,7 +173,7 @@ class Bars_g {
     this.angle = 0;
     this.width = width;
     this.height = height;
-  }
+  };
   draw() {
     ctx.save();
     ctx.translate(this.x, this.y);
@@ -188,5 +188,5 @@ class Bars_g {
       ")";
     ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);
     ctx.restore();
-  }
-}
+  };
+};

@@ -1,5 +1,9 @@
 document.getElementById("start-button").onclick = function startGame() {
   start();
+  derecha();
+  izquierda();
+  arriba();
+  abajo();
   var frames = 0;
   var barras = [];
   var sq = [];
@@ -7,11 +11,6 @@ document.getElementById("start-button").onclick = function startGame() {
   var barrasG2 = [];
   var interval;
   var hue = 0;
-
-  document.getElementById("derecha").addEventListener("click", derecha);
-  document.getElementById("izquierda").addEventListener("click", izquierda);
-  document.getElementById("arriba").addEventListener("click", arriba);
-  document.getElementById("abajo").addEventListener("click", abajo);
 
   //instacias
 
@@ -28,26 +27,34 @@ document.getElementById("start-button").onclick = function startGame() {
   function shiftHue(hue) {
     //función  para cambiar el color de los items
     return (hue + 1) % 360;
-  }
+  };
   function derecha() {
-    ship.speedX = +40;
-    exp.speedX = +40;
-  }
+    $("#derecha").click(function(){
+      ship.speedX = +40;
+      exp.speedX = +40;
+    });
+  };
   function izquierda() {
+    $("#izquierda").click(function(){
     ship.speedX = -40;
     exp.speedX = -40;
-  }
+  });
+};
   function arriba() {
+    $("#arriba").click(function(){
     ship.speedY = -40;
     exp.speedY = -40;
-  }
+  });
+};
   function abajo() {
+    $("#abajo").click(function(){
     ship.speedY = +40;
     exp.speedY = +40;
-  }
-  function start() {
-    interval = setInterval(update, 1000 / 60);
-  }
+  });
+};
+function start() {
+  interval = setInterval(update, 1000 / 60);
+};
   function points() {
     //función para sumar los puntos
     ctx.font = "40px Audiowide";
@@ -56,7 +63,7 @@ document.getElementById("start-button").onclick = function startGame() {
     ctx.strokeRect(430, 0, 285, 60);
     ctx.fillStyle = "white";
     ctx.fillText("Score " + Math.round(frames / 10), 440, 50);
-  }
+  };
   function gameOver() {
     clearInterval(interval);
     interval = undefined;
@@ -65,13 +72,13 @@ document.getElementById("start-button").onclick = function startGame() {
     ctx.fillText("Game Over", 130, 300);
     ctx.fillStyle = "white";
     ctx.fillText("X para reiniciar ", 30, 400);
-  }
+  };
   function everyinterval(n) {
     if ((frames / n) % 1 == 0) {
       return true;
-    }
+    };
     return false;
-  }
+  };
   function update() {
     var pos = Math.floor(Math.random() * 500); //
     var pos2 = Math.floor(Math.random() * 600); //
@@ -95,8 +102,8 @@ document.getElementById("start-button").onclick = function startGame() {
         hitSound.play();
         backgroundSound.stop();
         return;
-      }
-    }
+      };
+    };
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     frames++;
     space.draw();
@@ -117,8 +124,8 @@ document.getElementById("start-button").onclick = function startGame() {
         Math.round(frames / 10) == 1700
       ) {
         barras[i].y += 30;
-      }
-    }
+      };
+    };
     for (i = 0; i < sq.length; i++) {
       // Genera el cuadrado
       sq[i].y += 2;
@@ -135,36 +142,36 @@ document.getElementById("start-button").onclick = function startGame() {
         Math.round(frames / 10) == 1800
       ) {
         sq[i].y += 30;
-      }
-    }
+      };
+    };
     for (i = 0; i < barrasG.length; i++) {
       // Genera las barras giratorias
       barrasG[i].y += 4;
       barrasG[i].draw();
       barrasG[i].angle += (2 * Math.PI) / 180;
-    }
+    };
     for (i = 0; i < barrasG2.length; i++) {
       // Genera las barras giratorias
-      barrasG2[i].y += 4;
+      barrasG2[i].y -= 4;
       barrasG2[i].draw();
       barrasG2[i].angle -= (2 * Math.PI) / 180;
-    }
-    if (frames == 1 || everyinterval(200)) {
+    };
+    if (frames == 1 || everyinterval(150)) {
       // intervalo dónde se generara el obstáculo
       barras.push(new Bars(pos, -150, width, 40));
-    }
-    if (frames == 1 || everyinterval(120)) {
+    };
+    if (frames == 1 || everyinterval(150)) {
       // intervalo dónde se generara el obstáculo
-      sq.push(new Square(pos2, -300, 60, 60));
-    }
-    if (frames == 1 || everyinterval(200)) {
+      sq.push(new Square(pos2, -4050, 60, 60));
+    };
+    if (frames == 1 || everyinterval(150)) {
       // intervalo dónde se generara el obstáculo
-      barrasG.push(new Bars_g(pos3, -700, 200, 40));
-    }
-    if (frames == 1 || everyinterval(200)) {
+      barrasG.push(new Bars_g(pos3, -16200, 200, 40));
+    };
+    if (frames == 1 || everyinterval(150)) {
       // intervalo dónde se generara el obstáculo
-      barrasG2.push(new Bars_g(pos4, -400, 200, 40));
-    }
+      barrasG2.push(new Bars_g(pos4, 24900, 200, 40));
+    };
 
     ship.draw();
     ship.newPos();
@@ -182,20 +189,20 @@ document.getElementById("start-button").onclick = function startGame() {
     if (canvas.key && canvas.key == 37) {
       exp.speedX = -5;
       ship.speedX = -5;
-    }
+    };
     if (canvas.key && canvas.key == 39) {
       exp.speedX = 5;
       ship.speedX = 5;
-    }
+    };
     if (canvas.key && canvas.key == 38) {
       exp.speedY = -5;
       ship.speedY = -5;
-    }
+    };
     if (canvas.key && canvas.key == 40) {
       exp.speedY = 5;
       ship.speedY = 5;
-    }
-  }
+    };
+  };
 
   //teclas de Juego
 
@@ -216,6 +223,6 @@ document.getElementById("start-button").onclick = function startGame() {
       barrasG = [];
       barrasG2 = [];
       startGame();
-    }
+    };
   });
 };
